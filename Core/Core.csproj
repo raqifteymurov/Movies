@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AFEAD31F-22C4-4425-AF47-22AF04ED10D7}</ProjectGuid>
+    <ProjectGuid>{0E7A07F4-DF6B-47C4-BE6F-55409D20E5B9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAccess</RootNamespace>
-    <AssemblyName>DataAccess</AssemblyName>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -51,21 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\ICustomerDal.cs" />
-    <Compile Include="Concrete\EntityFramework\EfCustomerDal.cs" />
-    <Compile Include="Concrete\EntityFramework\MovieContext.cs" />
+    <Compile Include="DataAccess\Abstract\IEntityRepository.cs" />
+    <Compile Include="DataAccess\Concrete\EntityFramework\EfEntityRepositoryBase.cs" />
+    <Compile Include="Entities\Abstract\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj">
-      <Project>{0e7a07f4-df6b-47c4-be6f-55409d20e5b9}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Entities\Entities.csproj">
-      <Project>{668aa880-edec-4596-bd09-37a38807104b}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

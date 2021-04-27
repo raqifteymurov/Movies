@@ -1,4 +1,4 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess.Abstract;
 using Entities.Abstract;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Concrete.EntityFramework
+namespace Core.DataAccess.Concrete.EntityFramework
 {
     public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
         where TEntity : class, IEntity, new()
@@ -16,7 +16,7 @@ namespace DataAccess.Concrete.EntityFramework
     {
         public void Add(TEntity entity)
         {
-            using (TContext context=new TContext())
+            using (TContext context = new TContext())
             {
                 var addedEntity = context.Entry(entity);
                 addedEntity.State = EntityState.Added;
