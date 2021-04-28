@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAboutMovieService.cs" />
     <Compile Include="Abstract\ICustomerService.cs" />
+    <Compile Include="Concrete\AboutMovieManager.cs" />
     <Compile Include="Concrete\CustomerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
