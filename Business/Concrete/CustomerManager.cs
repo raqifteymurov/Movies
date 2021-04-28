@@ -23,6 +23,11 @@ namespace Business.Concrete
             _customerDal.Add(customer);
         }
 
+        public void Delete(Customer customer)
+        {
+            _customerDal.Delete(customer);
+        }
+
         public List<Customer> GetAll()
         {
             return _customerDal.GetAll();
