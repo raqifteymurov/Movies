@@ -14,6 +14,12 @@ namespace Business.Abstract
         void Delete(Customer customer);
         Customer GetbyId(int id);
         List<Customer> GetAll();
-
+        List<Customer> GetByFirstName(string firstName);
+        List<Customer> GetByLastName(string lastName);
+        List<Customer> GetByChosenMovie(string chosenmovie);
+        List<Customer> GetbyAge(int min, int max);
+        int GetMinAge();
+        int GetMaxAge();
     }
 }
+

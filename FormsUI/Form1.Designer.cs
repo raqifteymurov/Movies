@@ -52,10 +52,24 @@ namespace FormsUI
             this.lblAgeAdd = new System.Windows.Forms.Label();
             this.lblLastNameAdd = new System.Windows.Forms.Label();
             this.lblFirstNameAdd = new System.Windows.Forms.Label();
+            this.tbxMaxAgeSearch = new System.Windows.Forms.GroupBox();
+            this.gbxSearchByAge = new System.Windows.Forms.GroupBox();
+            this.tbxMaxAgeSearching = new System.Windows.Forms.TextBox();
+            this.tbxMinAgeSearching = new System.Windows.Forms.TextBox();
+            this.lblMaxAgeSearch = new System.Windows.Forms.Label();
+            this.lblMinAgeSearch = new System.Windows.Forms.Label();
+            this.tbxChosenMovieSearch = new System.Windows.Forms.TextBox();
+            this.lblChosenMovieSearch = new System.Windows.Forms.Label();
+            this.tbxLastNameSearching = new System.Windows.Forms.TextBox();
+            this.lblLastNameSearching = new System.Windows.Forms.Label();
+            this.tbxFirstNameSearching = new System.Windows.Forms.TextBox();
+            this.lblFirstNameSearching = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCustomers)).BeginInit();
             this.gbxCrud.SuspendLayout();
             this.gbxUpdate.SuspendLayout();
             this.gbxAdd.SuspendLayout();
+            this.tbxMaxAgeSearch.SuspendLayout();
+            this.gbxSearchByAge.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgwCustomers
@@ -311,6 +325,126 @@ namespace FormsUI
             this.lblFirstNameAdd.TabIndex = 0;
             this.lblFirstNameAdd.Text = "FirstName";
             // 
+            // tbxMaxAgeSearch
+            // 
+            this.tbxMaxAgeSearch.Controls.Add(this.gbxSearchByAge);
+            this.tbxMaxAgeSearch.Controls.Add(this.tbxChosenMovieSearch);
+            this.tbxMaxAgeSearch.Controls.Add(this.lblChosenMovieSearch);
+            this.tbxMaxAgeSearch.Controls.Add(this.tbxLastNameSearching);
+            this.tbxMaxAgeSearch.Controls.Add(this.lblLastNameSearching);
+            this.tbxMaxAgeSearch.Controls.Add(this.tbxFirstNameSearching);
+            this.tbxMaxAgeSearch.Controls.Add(this.lblFirstNameSearching);
+            this.tbxMaxAgeSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxMaxAgeSearch.Location = new System.Drawing.Point(560, 221);
+            this.tbxMaxAgeSearch.Name = "tbxMaxAgeSearch";
+            this.tbxMaxAgeSearch.Size = new System.Drawing.Size(358, 301);
+            this.tbxMaxAgeSearch.TabIndex = 2;
+            this.tbxMaxAgeSearch.TabStop = false;
+            this.tbxMaxAgeSearch.Text = "Searching";
+            // 
+            // gbxSearchByAge
+            // 
+            this.gbxSearchByAge.Controls.Add(this.tbxMaxAgeSearching);
+            this.gbxSearchByAge.Controls.Add(this.tbxMinAgeSearching);
+            this.gbxSearchByAge.Controls.Add(this.lblMaxAgeSearch);
+            this.gbxSearchByAge.Controls.Add(this.lblMinAgeSearch);
+            this.gbxSearchByAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbxSearchByAge.Location = new System.Drawing.Point(23, 174);
+            this.gbxSearchByAge.Name = "gbxSearchByAge";
+            this.gbxSearchByAge.Size = new System.Drawing.Size(310, 111);
+            this.gbxSearchByAge.TabIndex = 6;
+            this.gbxSearchByAge.TabStop = false;
+            this.gbxSearchByAge.Text = "Search By Age";
+            // 
+            // tbxMaxAgeSearching
+            // 
+            this.tbxMaxAgeSearching.Location = new System.Drawing.Point(121, 72);
+            this.tbxMaxAgeSearching.Name = "tbxMaxAgeSearching";
+            this.tbxMaxAgeSearching.Size = new System.Drawing.Size(50, 26);
+            this.tbxMaxAgeSearching.TabIndex = 3;
+            this.tbxMaxAgeSearching.TextChanged += new System.EventHandler(this.tbxMaxAgeSearching_TextChanged);
+            // 
+            // tbxMinAgeSearching
+            // 
+            this.tbxMinAgeSearching.Location = new System.Drawing.Point(121, 33);
+            this.tbxMinAgeSearching.Name = "tbxMinAgeSearching";
+            this.tbxMinAgeSearching.Size = new System.Drawing.Size(50, 26);
+            this.tbxMinAgeSearching.TabIndex = 2;
+            this.tbxMinAgeSearching.TextChanged += new System.EventHandler(this.tbxMinAgeSearching_TextChanged_1);
+            // 
+            // lblMaxAgeSearch
+            // 
+            this.lblMaxAgeSearch.AutoSize = true;
+            this.lblMaxAgeSearch.Location = new System.Drawing.Point(18, 75);
+            this.lblMaxAgeSearch.Name = "lblMaxAgeSearch";
+            this.lblMaxAgeSearch.Size = new System.Drawing.Size(67, 20);
+            this.lblMaxAgeSearch.TabIndex = 1;
+            this.lblMaxAgeSearch.Text = "MaxAge";
+            // 
+            // lblMinAgeSearch
+            // 
+            this.lblMinAgeSearch.AutoSize = true;
+            this.lblMinAgeSearch.Location = new System.Drawing.Point(18, 33);
+            this.lblMinAgeSearch.Name = "lblMinAgeSearch";
+            this.lblMinAgeSearch.Size = new System.Drawing.Size(63, 20);
+            this.lblMinAgeSearch.TabIndex = 0;
+            this.lblMinAgeSearch.Text = "MinAge";
+            // 
+            // tbxChosenMovieSearch
+            // 
+            this.tbxChosenMovieSearch.Location = new System.Drawing.Point(132, 121);
+            this.tbxChosenMovieSearch.Name = "tbxChosenMovieSearch";
+            this.tbxChosenMovieSearch.Size = new System.Drawing.Size(112, 27);
+            this.tbxChosenMovieSearch.TabIndex = 5;
+            this.tbxChosenMovieSearch.TextChanged += new System.EventHandler(this.tbxChosenMovieSearch_TextChanged);
+            // 
+            // lblChosenMovieSearch
+            // 
+            this.lblChosenMovieSearch.AutoSize = true;
+            this.lblChosenMovieSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblChosenMovieSearch.Location = new System.Drawing.Point(7, 129);
+            this.lblChosenMovieSearch.Name = "lblChosenMovieSearch";
+            this.lblChosenMovieSearch.Size = new System.Drawing.Size(119, 22);
+            this.lblChosenMovieSearch.TabIndex = 4;
+            this.lblChosenMovieSearch.Text = "ChosenMovie";
+            // 
+            // tbxLastNameSearching
+            // 
+            this.tbxLastNameSearching.Location = new System.Drawing.Point(132, 82);
+            this.tbxLastNameSearching.Name = "tbxLastNameSearching";
+            this.tbxLastNameSearching.Size = new System.Drawing.Size(112, 27);
+            this.tbxLastNameSearching.TabIndex = 3;
+            this.tbxLastNameSearching.TextChanged += new System.EventHandler(this.tbxLastNameSearching_TextChanged);
+            // 
+            // lblLastNameSearching
+            // 
+            this.lblLastNameSearching.AutoSize = true;
+            this.lblLastNameSearching.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblLastNameSearching.Location = new System.Drawing.Point(19, 87);
+            this.lblLastNameSearching.Name = "lblLastNameSearching";
+            this.lblLastNameSearching.Size = new System.Drawing.Size(91, 22);
+            this.lblLastNameSearching.TabIndex = 2;
+            this.lblLastNameSearching.Text = "LastName";
+            // 
+            // tbxFirstNameSearching
+            // 
+            this.tbxFirstNameSearching.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxFirstNameSearching.Location = new System.Drawing.Point(132, 40);
+            this.tbxFirstNameSearching.Name = "tbxFirstNameSearching";
+            this.tbxFirstNameSearching.Size = new System.Drawing.Size(112, 26);
+            this.tbxFirstNameSearching.TabIndex = 1;
+            this.tbxFirstNameSearching.TextChanged += new System.EventHandler(this.tbxFirstNameSearching_TextChanged);
+            // 
+            // lblFirstNameSearching
+            // 
+            this.lblFirstNameSearching.AutoSize = true;
+            this.lblFirstNameSearching.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblFirstNameSearching.Location = new System.Drawing.Point(19, 44);
+            this.lblFirstNameSearching.Name = "lblFirstNameSearching";
+            this.lblFirstNameSearching.Size = new System.Drawing.Size(92, 22);
+            this.lblFirstNameSearching.TabIndex = 0;
+            this.lblFirstNameSearching.Text = "FirstName";
+            // 
             // Form1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
@@ -318,6 +452,7 @@ namespace FormsUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(930, 534);
+            this.Controls.Add(this.tbxMaxAgeSearch);
             this.Controls.Add(this.gbxCrud);
             this.Controls.Add(this.dgwCustomers);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -330,6 +465,10 @@ namespace FormsUI
             this.gbxUpdate.PerformLayout();
             this.gbxAdd.ResumeLayout(false);
             this.gbxAdd.PerformLayout();
+            this.tbxMaxAgeSearch.ResumeLayout(false);
+            this.tbxMaxAgeSearch.PerformLayout();
+            this.gbxSearchByAge.ResumeLayout(false);
+            this.gbxSearchByAge.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -359,6 +498,18 @@ namespace FormsUI
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.GroupBox tbxMaxAgeSearch;
+        private System.Windows.Forms.TextBox tbxFirstNameSearching;
+        private System.Windows.Forms.Label lblFirstNameSearching;
+        private System.Windows.Forms.TextBox tbxLastNameSearching;
+        private System.Windows.Forms.Label lblLastNameSearching;
+        private System.Windows.Forms.TextBox tbxChosenMovieSearch;
+        private System.Windows.Forms.Label lblChosenMovieSearch;
+        private System.Windows.Forms.GroupBox gbxSearchByAge;
+        private System.Windows.Forms.TextBox tbxMaxAgeSearching;
+        private System.Windows.Forms.TextBox tbxMinAgeSearching;
+        private System.Windows.Forms.Label lblMaxAgeSearch;
+        private System.Windows.Forms.Label lblMinAgeSearch;
     }
 }
 

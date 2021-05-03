@@ -93,5 +93,72 @@ namespace FormsUI
             LoadCustomers();
             MessageBox.Show("ENTITIES DELETED", "MESSAGE: ");
         }
+
+        private void tbxFirstNameSearching_TextChanged(object sender, EventArgs e)
+        {
+            var text = tbxFirstNameSearching.Text;
+            if (!String.IsNullOrEmpty(text))
+            {
+                dgwCustomers.DataSource = _customerService.GetByFirstName(text);
+            }
+            else
+            {
+                LoadCustomers();
+            }
+        }
+
+        private void tbxLastNameSearching_TextChanged(object sender, EventArgs e)
+        {
+            var text = tbxLastNameSearching.Text;
+            if (!String.IsNullOrEmpty(text))
+            {
+                dgwCustomers.DataSource = _customerService.GetByLastName(text);
+            }
+            else
+            {
+                LoadCustomers();
+            }
+
+        }
+
+        private void tbxChosenMovieSearch_TextChanged(object sender, EventArgs e)
+        {
+            var text = tbxChosenMovieSearch.Text;
+            if (!String.IsNullOrEmpty(text))
+            {
+                dgwCustomers.DataSource = _customerService.GetByChosenMovie(text);
+            }
+            else
+            {
+                LoadCustomers();
+            }
+        }
+        private void tbxMinAgeSearching_TextChanged_1(object sender, EventArgs e)
+        {
+            LoadByAge();
+        }
+
+        private void tbxMaxAgeSearching_TextChanged(object sender, EventArgs e)
+        {
+            LoadByAge();
+        }
+        private void LoadByAge()
+        {
+            var minage = tbxMinAgeSearching.Text;
+            int min = _customerService.GetMinAge();
+            int max = _customerService.GetMaxAge();
+            if (!String.IsNullOrEmpty(minage))
+            {
+                min = Convert.ToInt32(minage);
+            }
+            var maxage = tbxMaxAgeSearching.Text;
+            if (!String.IsNullOrEmpty(maxage))
+            {
+                max =Convert.ToInt32(maxage);
+            }
+            dgwCustomers.DataSource = _customerService.GetbyAge(min, max);
+        }
+
+       
     }
 }
