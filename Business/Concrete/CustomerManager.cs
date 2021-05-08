@@ -42,7 +42,6 @@ namespace Business.Concrete
         {
             return _customerDal.GetAll(p=>p.ChosenMovie.ToLower().Contains(chosenmovie.ToLower()));
         }
-
         public List<Customer> GetByFirstName(string firstName)
         {
             return _customerDal.GetAll(p => p.FirstName.ToLower().Contains(firstName.ToLower()));
@@ -52,7 +51,6 @@ namespace Business.Concrete
         {
             return _customerDal.Get(p => p.Id == id);
         }
-
         public List<Customer> GetByLastName(string lastName)
         {
             return _customerDal.GetAll(p => p.LastName.ToLower().Contains(lastName.ToLower()));

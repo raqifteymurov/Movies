@@ -22,7 +22,6 @@ namespace FormsUI
             _customerService = new CustomerManager(new EfCustomerDal());
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadCustomers();
@@ -44,7 +43,6 @@ namespace FormsUI
         {
             dgwCustomers.DataSource = _customerService.GetAll();
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             _customerService.Add(new Customer
@@ -58,7 +56,6 @@ namespace FormsUI
             MessageBox.Show("ENTITIES ADDED", "MESSAGE: ");
             ClearEntities();
         }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             _customerService.Update(new Customer
@@ -72,9 +69,7 @@ namespace FormsUI
             LoadCustomers();
             MessageBox.Show("ENTITIES UPDATED", "MESSAGE: ");
             ClearEntities();
-
         }
-
         private void dgwCustomers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             var cells = dgwCustomers.CurrentRow.Cells;
@@ -83,7 +78,6 @@ namespace FormsUI
             tbxAgeUpdate.Text = cells[3].Value.ToString();
             tbxChosenMovieUpdate.Text = cells[4].Value.ToString();
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             _customerService.Delete(new Customer
@@ -93,7 +87,6 @@ namespace FormsUI
             LoadCustomers();
             MessageBox.Show("ENTITIES DELETED", "MESSAGE: ");
         }
-
         private void tbxFirstNameSearching_TextChanged(object sender, EventArgs e)
         {
             var text = tbxFirstNameSearching.Text;
@@ -106,7 +99,6 @@ namespace FormsUI
                 LoadCustomers();
             }
         }
-
         private void tbxLastNameSearching_TextChanged(object sender, EventArgs e)
         {
             var text = tbxLastNameSearching.Text;
@@ -118,7 +110,6 @@ namespace FormsUI
             {
                 LoadCustomers();
             }
-
         }
 
         private void tbxChosenMovieSearch_TextChanged(object sender, EventArgs e)
@@ -157,8 +148,6 @@ namespace FormsUI
                 max =Convert.ToInt32(maxage);
             }
             dgwCustomers.DataSource = _customerService.GetbyAge(min, max);
-        }
-
-       
+        } 
     }
 }

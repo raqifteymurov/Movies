@@ -341,6 +341,7 @@ namespace FormsUI
             this.tbxMaxAgeSearch.TabIndex = 2;
             this.tbxMaxAgeSearch.TabStop = false;
             this.tbxMaxAgeSearch.Text = "Searching";
+            this.tbxMaxAgeSearch.Visible = false;
             // 
             // gbxSearchByAge
             // 
@@ -349,9 +350,9 @@ namespace FormsUI
             this.gbxSearchByAge.Controls.Add(this.lblMaxAgeSearch);
             this.gbxSearchByAge.Controls.Add(this.lblMinAgeSearch);
             this.gbxSearchByAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbxSearchByAge.Location = new System.Drawing.Point(23, 174);
+            this.gbxSearchByAge.Location = new System.Drawing.Point(11, 174);
             this.gbxSearchByAge.Name = "gbxSearchByAge";
-            this.gbxSearchByAge.Size = new System.Drawing.Size(310, 111);
+            this.gbxSearchByAge.Size = new System.Drawing.Size(233, 111);
             this.gbxSearchByAge.TabIndex = 6;
             this.gbxSearchByAge.TabStop = false;
             this.gbxSearchByAge.Text = "Search By Age";
@@ -360,7 +361,7 @@ namespace FormsUI
             // 
             this.tbxMaxAgeSearching.Location = new System.Drawing.Point(121, 72);
             this.tbxMaxAgeSearching.Name = "tbxMaxAgeSearching";
-            this.tbxMaxAgeSearching.Size = new System.Drawing.Size(50, 26);
+            this.tbxMaxAgeSearching.Size = new System.Drawing.Size(63, 26);
             this.tbxMaxAgeSearching.TabIndex = 3;
             this.tbxMaxAgeSearching.TextChanged += new System.EventHandler(this.tbxMaxAgeSearching_TextChanged);
             // 
@@ -368,7 +369,7 @@ namespace FormsUI
             // 
             this.tbxMinAgeSearching.Location = new System.Drawing.Point(121, 33);
             this.tbxMinAgeSearching.Name = "tbxMinAgeSearching";
-            this.tbxMinAgeSearching.Size = new System.Drawing.Size(50, 26);
+            this.tbxMinAgeSearching.Size = new System.Drawing.Size(63, 26);
             this.tbxMinAgeSearching.TabIndex = 2;
             this.tbxMinAgeSearching.TextChanged += new System.EventHandler(this.tbxMinAgeSearching_TextChanged_1);
             // 
