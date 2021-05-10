@@ -17,6 +17,8 @@ namespace DataAccess.Concrete.EntityFramework
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new CustomerMap());
+            modelBuilder.Configurations.Add(new AboutMovieMap());
         }
+
     }
 }

@@ -55,6 +55,7 @@
     <Compile Include="Abstract\IAboutMovieDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfAboutMovieDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfCustomerDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Mapping\AboutMovieMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mapping\CustomerMap.cs" />
     <Compile Include="Concrete\EntityFramework\MovieContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

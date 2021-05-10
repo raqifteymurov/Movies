@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Business.Concrete;
+using Business.DependencyResolvers.Ninject;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using System;
@@ -19,7 +20,8 @@ namespace FormsUI
         private ICustomerService _customerService;
         public Form1()
         {
-            _customerService = new CustomerManager(new EfCustomerDal());
+            //_customerService = new CustomerManager(new EfCustomerDal());
+            _customerService = InstanceFactory.GetInstance<ICustomerService>();
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -86,6 +88,7 @@ namespace FormsUI
             });
             LoadCustomers();
             MessageBox.Show("ENTITIES DELETED", "MESSAGE: ");
+            ClearEntities();
         }
         private void tbxFirstNameSearching_TextChanged(object sender, EventArgs e)
         {
