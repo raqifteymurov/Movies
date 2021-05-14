@@ -341,7 +341,6 @@ namespace FormsUI
             this.tbxMaxAgeSearch.TabIndex = 2;
             this.tbxMaxAgeSearch.TabStop = false;
             this.tbxMaxAgeSearch.Text = "Searching";
-            this.tbxMaxAgeSearch.Visible = false;
             // 
             // gbxSearchByAge
             // 
@@ -356,6 +355,7 @@ namespace FormsUI
             this.gbxSearchByAge.TabIndex = 6;
             this.gbxSearchByAge.TabStop = false;
             this.gbxSearchByAge.Text = "Search By Age";
+            //this.gbxSearchByAge.Enter += new System.EventHandler(this.gbxSearchByAge_Enter);
             // 
             // tbxMaxAgeSearching
             // 

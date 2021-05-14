@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.CrossCuttingConserse.Validation.FluentValidation;
+using Core.CrossCuttingConserse.Validation.FluentValidation;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -6,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Business.Concrete
 {
     public class CustomerManager : ICustomerService
@@ -20,9 +21,9 @@ namespace Business.Concrete
 
         public void Add(Customer customer)
         {
+            ValidatorTool.FluentValidate(new CustomerValidator(), customer);
             _customerDal.Add(customer);
         }
-
         public void Delete(Customer customer)
         {
             _customerDal.Delete(customer);
@@ -37,7 +38,6 @@ namespace Business.Concrete
         {
             return _customerDal.GetAll(p => p.Age >= min && p.Age <= max);
         }
-
         public List<Customer> GetByChosenMovie(string chosenmovie)
         {
             return _customerDal.GetAll(p=>p.ChosenMovie.ToLower().Contains(chosenmovie.ToLower()));
@@ -46,7 +46,6 @@ namespace Business.Concrete
         {
             return _customerDal.GetAll(p => p.FirstName.ToLower().Contains(firstName.ToLower()));
         }
-
         public Customer GetbyId(int id)
         {
             return _customerDal.Get(p => p.Id == id);
@@ -68,6 +67,7 @@ namespace Business.Concrete
 
         public void Update(Customer customer)
         {
+            ValidatorTool.FluentValidate(new CustomerValidator(), customer);
             _customerDal.Update(customer);
         }
     }
